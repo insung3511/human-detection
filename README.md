@@ -1,2 +1,2 @@
 # human-detection
-openCV를 활용하여 사람 찾기
+음 귀찮다. 대회 끝나고 설명 추가할께요.
