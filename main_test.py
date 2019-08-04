@@ -9,13 +9,13 @@ start = time.time()
 hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 timeFile = open('time.txt', 'w')
-loopCounter = 0
+loopCounter = 1
 timeAvg = 0.0
 
 print("[INFO] ======Program Start======")
 
 while loopCounter < 100:
-    for imagePath in paths.list_images('./HO'):
+    for imagePath in paths.list_images('./analyze'):
         image = cv2.imread(imagePath)
         image = imutils.resize(image, width=min(400, image.shape[1]))
         orig = image.copy()
@@ -30,7 +30,7 @@ while loopCounter < 100:
             cv2.imwrite('result.jpg', image)
 
         filename = imagePath[imagePath.rfind("/") + 1:]
-        print("[INFO] {}: {} original boxes, {} after suppression".format(filename, len(rects), len(pick)))
+        print("[INFO] {}: {} original boxes, {} after suppression, {} times detected".format(filename, len(rects), len(pick), loopCounter))
         log = str(time.time() - start) + '\n'
         timeFile.write(log)
 
