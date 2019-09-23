@@ -9,7 +9,7 @@ cv2.startWindowThread()
 cap = cv2.VideoCapture('subway.mp4')
 while(True):
     ret, frame = cap.read()
-    frame = cv2.resize(frame, (640, 480))
+    frame = cv2.resize(frame, (720, 480))
     gray = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
     boxes, weights = hog.detectMultiScale(frame, winStride=(8,8) )
     boxes = np.array([[x, y, x + w, y + h] for (x, y, w, h) in boxes])

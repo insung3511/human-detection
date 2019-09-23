@@ -36,3 +36,5 @@ def main() :
     input_path = sys.argv[1]
     output_path = sys.argv[2]
     print(get_num_of_people(input_path, output_path))
+
+main()
