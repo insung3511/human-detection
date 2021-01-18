@@ -8,6 +8,12 @@
 ```link
 https://github.com/insung3511/openCV-Study
 ```
+openCV-Study 저장소에도 따로 작성한 문서는 있다. 
+```
+./face/README.md
+```
+위 디렉토리에 가면 있으니 참고하시길 바란다.
 
 # Can I use those files?
 그 subway.mp4와 같은 테스팅(?) 영상들은 진짜 은근히 구하기 어렵다. openCV 개발하면서 footage구하기 어려운 것에 충분히 동의하기 때문에 뭐든 써도 괜찮다.
+
